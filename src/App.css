@@ -1,0 +1,71 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  padding: 5px;
+  margin: 0;
+}
+
+li {
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  width: 100vh;
+  justify-content: space-between;
+  background-color: rgb(221, 230, 219)
+}
+
+.menu-container {
+  display: flex;
+}
+
+.menu-trigger img {
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: flex;
+  top: 100px;
+  left: 20px;
+  background-color: rgb(221, 230, 219)
+
+}
+
+.dropdown-item {
+  color: rgb(95, 160, 95);
+}
+
+.dropdown-item:hover {
+  background-color: rgb(156, 216, 141);
+}
+
+.socials {
+  display: flex;
+}
+
+.social-icon {
+  width: 30px;
+  padding: 5px;
+  color: black;
+}
