@@ -1,12 +1,20 @@
+import { useState } from 'react'
 import Facebook from '../assets/icons/facebook-icon-green.svg'
 import Instagram from '../assets/icons/instagram-icon-green.svg'
 import Soundcloud from '../assets/icons/soundcloud-icon-green.svg'
 import Spotify from '../assets/icons/spotify-icon-green.svg'
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 
 export default function Root() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const updateStatus = () => {
+    setIsLoggedIn((prev) => !prev)
+  }
+
   return (
     <>
+      <div className='container'>
         <div className="header">
             <div className="menu-container">
                 <div className="dropdown-menu">
@@ -26,8 +34,10 @@ export default function Root() {
             </div>
         </div>
         <div className='content'>
-            <Outlet />
+            <Outlet loggedIn={isLoggedIn}/>
         </div>
+      </div>
+
     </>
 
   );
@@ -44,9 +54,9 @@ function MenuItem(props) {
 function SocialMedia(props) {
   return (
     <>
-      <a href={props.href} target="_blank">
+      <Link to={props.href} target="_blank">
         <img src={props.img} alt="" className="social-icon" />
-      </a>
+      </Link>
     </>
   );
 }

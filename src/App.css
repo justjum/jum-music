@@ -14,6 +14,8 @@ ul {
   display: flex;
   padding: 5px;
   margin: 0;
+  z-index: 0;
+  border-radius: 5px;
 }
 
 li {
@@ -30,7 +32,7 @@ a {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  background-color: rgb(221, 230, 219)
+  background-color: rgb(221, 230, 219);
 }
 
 .menu-container {
@@ -69,3 +71,23 @@ a {
   padding: 5px;
   color: black;
 }
+
+.container {
+  position: relative;
+  border: solid 2px rgb(95, 160, 95);
+  border-radius: 5px;
+}
+
+.image {
+  max-width: 400px;
+}
+
+.popup {
+  width: 300px;
+  height: 300px;
+  border: solid 1px rgb(95, 160, 95);
+  border-radius: 10px;
+  position: absolute;
+
+}
+
