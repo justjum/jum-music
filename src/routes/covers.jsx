@@ -4,10 +4,10 @@ import YourSong from "../assets/videos/Your Song 420.mp4"
 
 export default function Covers() {
     return (
-        <>
+        <div className="videos">
             <Video video={Wish} title={'Jum sings...Pink Floyd - Wish You Were Here'}/>
             <Video video={YourSong} title={'Jum sings...Elton John - Your Song'} />
-        </>
+        </div>
     )
 }
 

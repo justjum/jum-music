@@ -25,6 +25,8 @@ function App() {
     setIsLoggedIn((prev) => !prev)
   }
 
+  
+
   return (
     <>
      <div className='container'>
@@ -50,11 +52,12 @@ function App() {
               <BrowserRouter>
                 <Routes>
                   <Route path="/" element = {<Index />} />
+                  <Route path="/About" element = {<About />} />
                   <Route path="/Gigs" element = {<Gigs />} />
                   <Route path="/Music" element = {<Music />} />
                   <Route path="/Contact" element = {<Contact />} />
                   <Route path="/Music/Originals" element = {<Originals />} />
-                  <Route path="/Music/Covers" element = {isLoggedIn ? <Covers />  : <Login />} />
+                  <Route path="/Music/Covers" element = {isLoggedIn ? <Covers />  : <Login change = {updateStatus}/>} />
                 </Routes>
               </BrowserRouter>
         </div>

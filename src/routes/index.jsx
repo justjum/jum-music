@@ -4,7 +4,8 @@ export default function Index() {
     return (
         <>
             <img className='image' src={Jum} alt="" />
-            <h1>Jum Ryan</h1>
+            <h1>Jum</h1>
+            <h2>Singer ~ Songwriter ~ Storyteller</h2>
 
     
         </>
