@@ -34,17 +34,17 @@ function App() {
             <div className="menu-container">
                 <div className="dropdown-menu">
                 <ul>
-                    <MenuItem text={"About"} href={"/About"} />
-                    <MenuItem text={"Gigs"} href={"/Gigs"} />
-                    <MenuItem text={"Music"} href={"/Music"} />
-                    <MenuItem text={"Contact"} href={"/Contact"} />
+                    <MenuItem text={"about"} href={"/About"} />
+                    <MenuItem text={"gigs"} href={"/Gigs"} />
+                    <MenuItem text={"music"} href={"/Music"} />
+                    <MenuItem text={"contact"} href={"/Contact"} />
                 </ul>
                 </div>
             </div>
             <div className="socials">
                 <SocialMedia img={Facebook} href="http://www.facebook.com/thejumshow" />
                 <SocialMedia img={Instagram} href="http://www.instagram.com/thejumshow" />
-                <SocialMedia img={Spotify} href="http://www.spotify.com/flitters-music" />
+                <SocialMedia img={Spotify} href="http://open.spotify.com/artist/7MoklLsEE30ivhM27j8LTv" />
                 <SocialMedia img={Soundcloud} href="http://www.soundcloud.com/flitters" />
             </div>
         </div>
@@ -78,7 +78,7 @@ function MenuItem(props) {
 function SocialMedia(props) {
   return (
     <>
-      <a href="{props.href}" target="_blank">
+      <a href={props.href} target="_blank" rel="noreferrer">
         <img src={props.img} alt="" className="social-icon" />
       </a>
     </>

@@ -13,7 +13,7 @@ export default function Covers() {
 
 function Video(props) {
     return (
-        <>
+        <div className="video-box">
             <h2>{props.title}</h2>
             <ReactPlayer    
                 url={props.video}
@@ -21,7 +21,8 @@ function Video(props) {
                 playing={false}
                 className="logo"
                 controls={true}
-                />
-        </>
+            />
+        </div>
+
     )
 }
